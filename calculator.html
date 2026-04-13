@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <script src="calculator.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background-color: #222;
+            color: white;
+        }
+        table {
+            margin: auto;
+            border-spacing: 10px;
+        }
+        input[type="text"] {
+            width: 100%;
+            height: 50px;
+            font-size: 24px;
+            text-align: right;
+            padding: 5px;
+        }
+        input[type="button"] {
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .toggle-btn {
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1 style="box-shadow: 0 0 12px rgba(0, 0, 255, 0.6); padding: 10px;">Advanced Calculator</h1>
+
+    
+    <button class="toggle-btn" onclick="toggleMode()">🌙 Toggle Dark Mode</button>
+     <fieldset>
+    <table>
+        
+        <tr>
+            <th colspan="4">
+                <input type="text" id="k" readonly>
+            </th>
+        </tr>
+        <tr>
+            <th><input type="button" value="(" onclick="pick('(')"></th>
+            <th><input type="button" value=")" onclick="pick(')')"></th>
+            <th><input type="button" value="C" onclick="clearDisplay()"></th>
+            <th><input type="button" value="⌫" onclick="backspace()"></th>
+        </tr>
+        <tr>
+            <th><input type="button" value="1" onclick="pick('1')"></th>
+            <th><input type="button" value="2" onclick="pick('2')"></th>
+            <th><input type="button" value="3" onclick="pick('3')"></th>
+            <th><input type="button" value="+" onclick="pick('+')"></th>
+        </tr>
+      <tr>
+        <th><input type ="button"value="4" onclick="pick('4')"></th>
+        <th><input type= "button" value="5" onclick="pick('5')"></th>
+        <th><input type="button" value="6" onclick="pick('6')"></th>
+        <th><input type="button" value="-" onclick="pick('-')"></th>
+      </tr>
+        <tr>
+            <th><input type="button" value="7" onclick="pick('7')"></th>
+            <th><input type="button" value="8" onclick="pick('8')"></th>
+            <th><input type="button" value="9" onclick="pick('9')"></th>
+            <th><input type="button" value="*" onclick="pick('*')"></th>
+        </tr>
+        <tr>
+            <th><input type="button" value="0" onclick="pick('0')"></th>
+            <th><input type="button" value="." onclick="pick('.')"></th>
+            <th><input type="button" value="/" onclick="pick('/')"></th>
+            <th><input type="button" value="=" onclick="calculate()"></th>
+        </tr>
+    </table>
+     </fieldset>
+</body>
+</html>
